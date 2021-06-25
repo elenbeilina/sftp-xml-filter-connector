@@ -1,0 +1,19 @@
+{
+  "name": "sftp-sink-connector",
+  "config": {
+    "connector.class": "org.apache.camel.kafkaconnector.sftp.CamelSftpSinkConnector",
+    "tasks.max": "1",
+    "topics": "main",
+    "camel.sink.path.host":"sftp",
+    "camel.sink.path.port":"22",
+    "camel.sink.path.directoryName":"/people",
+    "camel.sink.endpoint.username":"hun_solo",
+    "camel.sink.endpoint.password":"millennium_falcon",
+    "camel.sink.endpoint.fileName": "${exchangeId}.xml",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+
+    "transforms":"xml_filter",
+    "transforms.xml_filter.type": "com.aqualen.xml.filter.XmlFilter",
+    "transforms.xml_filter.x-path":"/people[name='Luke Skywalker']"
+  }
+}
