@@ -27,7 +27,7 @@
     ```
     
 Result can be checked in `star_wars/people` folder via connecting to SFTP server.
-Pushed 5 test records and because of filtration logic in sftp ends up only one - Luke Skywalker.
+Pushed 5 test records and because of filtration logic in sftp ends up only 3, that passed the filtration logic.
 
 **SFTP properties**:
 ```

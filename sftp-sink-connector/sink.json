@@ -14,6 +14,7 @@
 
     "transforms":"xml_filter",
     "transforms.xml_filter.type": "com.aqualen.xml.filter.XmlFilter",
-    "transforms.xml_filter.x-path":"/people[name='Luke Skywalker']"
+    "transforms.xml_filter.x-path":"/people/eye_color/text()",
+    "transforms.xml_filter.filter.list":"yellow, blue"
   }
 }
